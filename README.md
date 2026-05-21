@@ -1,1 +1,1 @@
-This is Java Practice Repo.
+This is Java DSA Practice Repo.
