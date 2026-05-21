@@ -1,0 +1,28 @@
+package ArrayCodes;
+
+public class linearSearch {
+
+	public static int linearSearchh(int nums[], int key) {
+		for(int i=0; i<nums.length; i++) {
+			if(nums[i]==key) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		int nums[] = {9, 44, 52, 10, 77, 88};
+        int key = 10;
+        int index = linearSearchh(nums, key);
+        if(index==-1) {
+        	System.out.print("Not found");
+        }else {
+        	System.out.print("Found at : " + index);
+        }
+	}
+
+}
+
