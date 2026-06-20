@@ -1,1 +1,74 @@
+1. Access Parent Class Variable
+
+class Animal {
+    String color = "White";
+}
+
+class Dog extends Animal {
+    String color = "Black";
+
+    void display() {
+        System.out.println("Child color: " + color);
+        System.out.println("Parent color: " + super.color);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.display();
+    }
+}
+
+2. Call Parent Class Method
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog barks");
+    }
+
+    void display() {
+        sound();        // calls child method
+        super.sound();  // calls parent method
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.display();
+    }
+}
+
+
+3. Call Parent Class Constructor
+
+class Animal {
+
+    Animal() {
+        System.out.println("Animal constructor called");
+    }
+}
+
+class Dog extends Animal {
+
+    Dog() {
+        super(); // calls Animal constructor
+        System.out.println("Dog constructor called");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+    }
+}
+
 
