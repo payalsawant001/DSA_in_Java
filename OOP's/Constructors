@@ -1,1 +1,97 @@
+1. Default Constructor
+
+class Student {
+
+    Student() {
+        System.out.println("Constructor called");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+    }
+}
+
+2. Parameterized Constructor
+
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student("Payal", 22);
+        s1.display();
+    }
+}
+
+3. Constructor Overloading
+
+class Student {
+    String name;
+    int age;
+
+    Student() {
+        System.out.println("Default Constructor");
+    }
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        Student s2 = new Student("Payal");
+        s2.display();
+
+        Student s3 = new Student("Rahul", 21);
+        s3.display();
+    }
+}
+
+4. this() Constructor Chaining
+
+class Student {
+
+    Student() {
+        this("Payal");
+        System.out.println("Default Constructor");
+    }
+
+    Student(String name) {
+        System.out.println(name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+    }
+}
 
