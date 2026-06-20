@@ -1,1 +1,77 @@
 
+1. Static Variable (shared by all objects)
+
+class Student {
+    String name;
+    static String college = "ABC College";
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println(name + " studies in " + college);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Payal");
+        Student s2 = new Student("Rahul");
+
+        s1.display();
+        s2.display();
+    }
+}
+
+
+2. Static Method
+
+
+class Calculator {
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        int result = Calculator.add(10, 20);
+
+        System.out.println(result);
+    }
+}
+
+3. Static Block
+
+class Test {
+
+    static {
+        System.out.println("Static block executed");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method executed");
+    }
+}
+
+4. Static Nested Class
+
+class Outer {
+
+    static class Inner {
+        void show() {
+            System.out.println("Inside static nested class");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Outer.Inner obj = new Outer.Inner();
+        obj.show();
+    }
+}
