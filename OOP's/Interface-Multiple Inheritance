@@ -1,1 +1,30 @@
+Multiple Inheritance Using Interfaces:
 
+interface Camera {
+    void clickPhoto();
+}
+
+interface MusicPlayer {
+    void playMusic();
+}
+
+class SmartPhone implements Camera, MusicPlayer {
+
+    public void clickPhoto() {
+        System.out.println("Photo clicked");
+    }
+
+    public void playMusic() {
+        System.out.println("Music is playing");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        SmartPhone sp = new SmartPhone();
+
+        sp.clickPhoto();
+        sp.playMusic();
+    }
+}
