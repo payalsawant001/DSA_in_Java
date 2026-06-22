@@ -1,10 +1,9 @@
 # Recursion in Java
 
-Recursion is a programming technique where a method calls itself to solve a problem. A recursive solution breaks a large problem into smaller subproblems until a stopping condition (base case) is reached.
+Recursion is a programming technique where a method calls itself to solve a problem. Instead of solving the entire problem at once, recursion breaks the problem into smaller subproblems until a stopping condition is reached.
 
-## Structure of a Recursive Method
+Structure of a Recursive Method
 
-```java
 returnType methodName(parameters) {
 
     // Base Case
@@ -15,11 +14,9 @@ returnType methodName(parameters) {
     // Recursive Case
     return methodName(smallerInput);
 }
-```
 
-## Example: Factorial Using Recursion
+Example: Factorial Using Recursion
 
-```java
 public class Factorial {
 
     static int factorial(int n) {
@@ -38,51 +35,56 @@ public class Factorial {
         System.out.println("Factorial: " + result);
     }
 }
-```
 
-### Output
+Output
 
-```text
 Factorial: 120
-```
 
-## How It Works
+How Recursion Works
 
-```text
+1. The method is called.
+2. If the base case is reached, the method stops.
+3. Otherwise, the method calls itself with a smaller input.
+4. Each recursive call is stored in the call stack.
+5. Once the base case is reached, calls return one by one.
+
+Example
+
 factorial(5)
 → 5 × factorial(4)
 → 5 × 4 × factorial(3)
 → 5 × 4 × 3 × factorial(2)
 → 5 × 4 × 3 × 2 × factorial(1)
-→ 5 × 4 × 3 × 2 × 1
 → 120
-```
 
-## Key Components
+Key Components
 
-- **Base Case:** Stops the recursion.
-- **Recursive Case:** Calls the same method with a smaller input.
+Base Case: The condition that stops recursion.
 
-## Advantages
+Recursive Case: The part where the method calls itself.
 
-- Makes code shorter and easier to understand.
-- Useful for tree, graph, and divide-and-conquer problems.
-- Simplifies complex problems.
+Advantages
 
-## Disadvantages
+Produces clean and concise code.
+Useful for problems involving trees, graphs, and divide-and-conquer.
+Simplifies complex problems.
 
-- Uses extra memory due to the call stack.
-- Can cause `StackOverflowError` if the base case is missing.
-- May be slower than iterative solutions.
+Disadvantages
 
-## Common Applications
+Uses extra memory because of the call stack.
+Can cause StackOverflowError if the base case is missing.
+May be slower than iterative solutions.
 
-- Factorial
-- Fibonacci Sequence
-- Binary Search
-- Tree Traversal
-- Backtracking
-- Merge Sort
-- Quick Sort
+Common Applications
 
-> **Recursion = Base Case + Recursive Call**
+Factorial Calculation
+Fibonacci Sequence
+Binary Search
+Tree Traversal
+Backtracking Problems
+Merge Sort
+Quick Sort
+
+Formula
+
+Recursion = Base Case + Recursive Call
