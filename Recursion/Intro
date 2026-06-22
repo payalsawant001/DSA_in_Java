@@ -1,0 +1,88 @@
+# Recursion in Java
+
+Recursion is a programming technique where a method calls itself to solve a problem. A recursive solution breaks a large problem into smaller subproblems until a stopping condition (base case) is reached.
+
+## Structure of a Recursive Method
+
+```java
+returnType methodName(parameters) {
+
+    // Base Case
+    if (condition) {
+        return value;
+    }
+
+    // Recursive Case
+    return methodName(smallerInput);
+}
+```
+
+## Example: Factorial Using Recursion
+
+```java
+public class Factorial {
+
+    static int factorial(int n) {
+
+        // Base Case
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+
+        // Recursive Case
+        return n * factorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        int result = factorial(5);
+        System.out.println("Factorial: " + result);
+    }
+}
+```
+
+### Output
+
+```text
+Factorial: 120
+```
+
+## How It Works
+
+```text
+factorial(5)
+→ 5 × factorial(4)
+→ 5 × 4 × factorial(3)
+→ 5 × 4 × 3 × factorial(2)
+→ 5 × 4 × 3 × 2 × factorial(1)
+→ 5 × 4 × 3 × 2 × 1
+→ 120
+```
+
+## Key Components
+
+- **Base Case:** Stops the recursion.
+- **Recursive Case:** Calls the same method with a smaller input.
+
+## Advantages
+
+- Makes code shorter and easier to understand.
+- Useful for tree, graph, and divide-and-conquer problems.
+- Simplifies complex problems.
+
+## Disadvantages
+
+- Uses extra memory due to the call stack.
+- Can cause `StackOverflowError` if the base case is missing.
+- May be slower than iterative solutions.
+
+## Common Applications
+
+- Factorial
+- Fibonacci Sequence
+- Binary Search
+- Tree Traversal
+- Backtracking
+- Merge Sort
+- Quick Sort
+
+> **Recursion = Base Case + Recursive Call**
