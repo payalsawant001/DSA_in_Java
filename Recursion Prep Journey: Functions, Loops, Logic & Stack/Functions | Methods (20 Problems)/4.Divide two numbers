@@ -1,0 +1,16 @@
+package recursionPre;
+
+public class Recursion {
+	
+	public static int divNum(int a, int b) {
+		return a/b;
+	}
+
+	public static void main(String[] args) {
+		int a=10;
+		int b=5;
+		int result = divNum(a, b);
+		System.out.println("Division of "+ a + " and "+ b+" = " + result);
+	}
+
+}
