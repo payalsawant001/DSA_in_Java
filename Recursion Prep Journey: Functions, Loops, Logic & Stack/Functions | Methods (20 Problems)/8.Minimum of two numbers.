@@ -1,0 +1,19 @@
+package recursionPre;
+
+public class Recursion {
+	
+	public static int minOfTwo(int a, int b){
+		if(a>b) {
+			return b;
+		}else {
+		   return a;	
+		}
+	}
+
+	public static void main(String[] args) {
+		int a=15, b=88;
+		int res = minOfTwo(a,b);
+		System.out.println("Minimum Number of "+ a + " and "+b+ " is "+" = " + res);
+	}
+
+}
