@@ -1,0 +1,16 @@
+package recursionPre;
+
+public class Recursion {
+	
+	public static int addNum(int a, int b) {
+		return a+b;
+	}
+
+	public static void main(String[] args) {
+		int a=10;
+		int b=5;
+		int result = addNum(a, b);
+		System.out.println("Addition of "+ a + " and "+ b+" = " + result);
+	}
+
+}
