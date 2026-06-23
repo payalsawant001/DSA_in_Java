@@ -1,0 +1,15 @@
+package recursionPre;
+
+public class Recursion {
+	
+	public static int squareOfNum(int x) {
+		return x*x;
+	}
+
+	public static void main(String[] args) {
+		int x=6;
+		int res = squareOfNum(x);
+		System.out.println("Square of "+ x + " is "+" = " + res);
+	}
+
+}
