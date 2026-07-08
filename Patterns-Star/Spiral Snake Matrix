@@ -1,0 +1,28 @@
+public class SpiralSnake {
+
+    public static void main(String[] args) {
+
+        int rows = 4, cols = 5;
+        int num = 1;
+
+        for (int i = 0; i < rows; i++) {
+
+            if (i % 2 == 0) {
+
+                for (int j = 0; j < cols; j++)
+                    System.out.printf("%3d", num++);
+
+            } else {
+
+                int start = num + cols - 1;
+
+                for (int j = start; j >= num; j--)
+                    System.out.printf("%3d", j);
+
+                num += cols;
+            }
+
+            System.out.println();
+        }
+    }
+}
