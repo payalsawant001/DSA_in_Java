@@ -20,7 +20,7 @@ public class Main {
         System.out.println(c.add(10, 20, 30));
     }
 }
-
+======================================================
 2. Runtime Polymorphism (Dynamic Polymorphism)
 
 class Animal {
@@ -44,4 +44,4 @@ public class Main {
         a.sound();
     }
 }
-
+=================================================
