@@ -1,5 +1,4 @@
-# Recursion in Java:
-
+# Recursion in Java:-
 Recursion is a programming technique where a method calls itself to solve a problem. Instead of solving the entire problem at once, recursion breaks the problem into smaller subproblems until a stopping condition is reached.
 
 Structure of a Recursive Method
