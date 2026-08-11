@@ -1,0 +1,18 @@
+public class Star {
+  public static void main(String args[]) {
+    int n = 4;
+
+    for (int Row = 1; Row <= n; Row++) {
+      for (int Col = 1; Col <= n; Col++) {
+
+        if (Row == 1 || Row == n || Col == 1 || Col == n) {
+          System.out.print("*");
+        } else {
+          System.out.print(" ");
+        }
+
+      }
+      System.out.println();
+    }
+  }
+}

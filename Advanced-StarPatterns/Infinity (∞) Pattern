@@ -1,0 +1,26 @@
+public class InfinityPattern {
+    public static void main(String[] args) {
+        int n = 4;
+
+        for (int i = 0; i < 2 * n - 1; i++) {
+
+            int row = (i < n) ? i : 2 * n - 2 - i;
+
+            // Left wing
+            for (int j = 0; j <= row; j++)
+                System.out.print("*");
+
+            for (int j = 0; j < 2 * (n - row - 1); j++)
+                System.out.print(" ");
+
+            for (int j = 0; j < 2 * (n - row - 1); j++)
+                System.out.print(" ");
+
+            // Right wing
+            for (int j = 0; j <= row; j++)
+                System.out.print("*");
+
+            System.out.println();
+        }
+    }
+}

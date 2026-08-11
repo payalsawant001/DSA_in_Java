@@ -1,0 +1,32 @@
+Important Concept : 
+When we write:ch++;
+It increases the character by 1 in ASCII value.
+Example:
+'A' → 'B'
+'B' → 'C'
+'Z' → next ASCII character, Because internally characters are stored as numbers.
+For example:
+'A' = 65
+'B' = 66
+'C' = 67
+So ch++ simply increases that number by 1.
+
+Code : 
+
+public class CharacterPattern {
+  public static void main(String args[]) {
+
+    int n = 4;
+    char ch = 'A';
+
+    for (int line = 1; line <= n; line++) {
+      for (int letter = 1; letter <= line; letter++) {
+        System.out.print(ch);
+        ch++;
+      }
+      System.out.println();
+    }
+  }
+}
+
+

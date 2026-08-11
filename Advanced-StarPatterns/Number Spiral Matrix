@@ -1,0 +1,37 @@
+public class NumberSpiral {
+
+    public static void main(String[] args) {
+
+        int n = 5;
+        int[][] a = new int[n][n];
+
+        int top = 0, bottom = n - 1;
+        int left = 0, right = n - 1;
+        int num = 1;
+
+        while (top <= bottom && left <= right) {
+
+            for (int j = left; j <= right; j++)
+                a[top][j] = num++;
+            top++;
+
+            for (int i = top; i <= bottom; i++)
+                a[i][right] = num++;
+            right--;
+
+            for (int j = right; j >= left && top <= bottom; j--)
+                a[bottom][j] = num++;
+            bottom--;
+
+            for (int i = bottom; i >= top && left <= right; i--)
+                a[i][left] = num++;
+            left++;
+        }
+
+        for (int[] row : a) {
+            for (int x : row)
+                System.out.printf("%3d", x);
+            System.out.println();
+        }
+    }
+}
